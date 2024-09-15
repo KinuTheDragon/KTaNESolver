@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #444;
+    --text-color: #fff;
+    --highlight-text-color: #f80;
+    --edgework-color: #040;
+    --module-color: #008;
+}
+
+h1, h2 {
+    font-family: 'Special Elite';
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Noto Sans';
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#body {
+    width: 100%;
+    display: flex;
+}
+
+#edgework {
+    background-color: var(--edgework-color);
+}
+
+#module {
+    background-color: var(--module-color);
+}
+
+#edgework, #module {
+    border-radius: 10px;
+    flex: 1;
+}
+
+#edgework #serialNumber {
+    text-transform: uppercase;
+}
+
+#result {
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+.highlight {
+    color: var(--highlight-text-color);
+}
+
+#module input {
+    width: 100%;
+}
+
+a {
+    color: #0ff;
+}
+
+a:hover, a:active {
+    color: #0f0;
+}

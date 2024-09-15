@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>KTaNE Solver</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1 class="center">KTaNE Solver by <a href="https://kinuthedragon.github.io">KinuTheDragon</a></h1>
+        <div id="body">
+            <div id="edgework">
+                <h2 class="center">Edgework</h2>
+                <div class="center">
+                    <button onclick="resetEdgework()">Reset Edgework</button>
+                </div>
+                <table>
+                    <tr>
+                        <td><label for="serialNumber">Serial number:</label></td>
+                        <td><input id="serialNumber" type="text" value="A00000"></input></td>
+                    </tr>
+                    <tr>
+                        <td><label for="batteriesAA">AA batteries:</label></td>
+                        <td><input id="batteriesAA" type="number" min="0" step="1" value="0"></input></td>
+                    </tr>
+                    <tr>
+                        <td><label for="batteriesD">D batteries:</label></td>
+                        <td><input id="batteriesD" type="number" min="0" step="1" value="0"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Ports</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><label for="portsDVID">DVI-D ports:</label></td>
+                                    <td><input id="portsDVID" type="number" min="0" step="1" value="0"></input></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="portsParallel">Parallel ports:</label></td>
+                                    <td><input id="portsParallel" type="number" min="0" step="1" value="0"></input></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="portsPS2">PS/2 ports:</label></td>
+                                    <td><input id="portsPS2" type="number" min="0" step="1" value="0"></input></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="portsRJ45">RJ-45 ports:</label></td>
+                                    <td><input id="portsRJ45" type="number" min="0" step="1" value="0"></input></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="portsSerial">Serial ports:</label></td>
+                                    <td><input id="portsSerial" type="number" min="0" step="1" value="0"></input></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="portsStereoRCA">Stereo RCA ports:</label></td>
+                                    <td><input id="portsStereoRCA" type="number" min="0" step="1" value="0"></input></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Indicators</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><label for="indicatorBOB">BOB indicator:</label></td>
+                                    <td><select id="indicatorBOB">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorCAR">CAR indicator:</label></td>
+                                    <td><select id="indicatorCAR">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorCLR">CLR indicator:</label></td>
+                                    <td><select id="indicatorCLR">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorFRK">FRK indicator:</label></td>
+                                    <td><select id="indicatorFRK">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorFRQ">FRQ indicator:</label></td>
+                                    <td><select id="indicatorFRQ">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorIND">IND indicator:</label></td>
+                                    <td><select id="indicatorIND">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorMSA">MSA indicator:</label></td>
+                                    <td><select id="indicatorMSA">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorNSA">NSA indicator:</label></td>
+                                    <td><select id="indicatorNSA">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorSIG">SIG indicator:</label></td>
+                                    <td><select id="indicatorSIG">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorSND">SND indicator:</label></td>
+                                    <td><select id="indicatorSND">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="indicatorTRN">TRN indicator:</label></td>
+                                    <td><select id="indicatorTRN">
+                                        <option value="">Nonexistent</option>
+                                        <option value="lit">Lit</option>
+                                        <option value="unlit">Unlit</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="litNLL">Lit NLL indicators:</label></td>
+                                    <td><input id="litNLL" type="number" min="0" step="1" value="0" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="unlitNLL">Unlit NLL indicators:</label></td>
+                                    <td><input id="unlitNLL" type="number" min="0" step="1" value="0" disabled></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="strikes">Strikes:</label></td>
+                        <td><input id="strikes" type="number" min="0" step="1" value="0"></input></td>
+                    </tr>
+                </table>
+            </div><!--
+                --><div id="module">
+                    <h2 class="center">Module</h2>
+                    <div class="center">
+                        <label for="moduleType">Module:</label>
+                        <select id="moduleType">
+                        </select><br/>
+                        <label for="filterType">Filter:</label>
+                        <select id="filterType" onchange="updateFilter()">
+                            <option value="V">Vanilla only</option>
+                            <option value="M">Mods only</option>
+                            <option value="VM" selected="selected">Vanilla and mods</option>
+                        </select>
+                    </div>
+                    <table id="solver"></table>
+                    <h3 class="center" id="result"></h2>
+                </div>
+            </div>
+            <script src="js/utils.js"></script>
+            <script src="js/ui.js"></script>
+            <script src="js/solvers.js"></script>
+            <script src="js/edgework.js"></script>
+            <script src="js/modules.js"></script>
+            <script src="js/solver_loader.js"></script>
+        </body>
+        </html>
