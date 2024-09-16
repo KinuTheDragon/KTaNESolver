@@ -88,6 +88,14 @@
     }
 
     function getResult() {
+        try {
+            return getActualResult();
+        } catch {
+            return "Invalid data.";
+        }
+    }
+
+    function getActualResult() {
         let display = [d1, d2, d3, d4, d5] = [0, 1, 2, 3, 4].map(x => WORDS.indexOf(solverFields["word" + x].replace(/:$/, "")));
         let [b1, b2] = [0, 1].map(x => WORDS.indexOf(solverFields["buttonText" + x]));
         let [c4, c5] = [3, 4].map(x => COLORS.indexOf(solverFields["color" + x]));

@@ -16,7 +16,16 @@
         "←": "impliedby",
         "<": "impliedby"
     };
-    const CASE_NAMES = ["Outside", "C", "B", "BC", "A", "AC", "AB", "ABC"];
+    const CASE_NAMES = [
+        "outside (-/FFF)",
+        "bottom-right (C/FFT)",
+        "bottom-left (B/FTF)",
+        "bottom-middle (BC/FTT)",
+        "top (A/TFF)",
+        "top-right (AC/TFT)",
+        "top-left (AB/TTF)",
+        "middle (ABC/TTT)"
+    ];
 
     function setUpBVDUI() {
         addTextInput("Expression", "expression");
@@ -48,7 +57,7 @@
     function getActualResult() {
         let invalidity = getExpressionInvalidity();
         if (invalidity) return `Invalid expression: unknown ${invalidity}.`;
-        return "Click on: " + getCasesOn().map(x => CASE_NAMES[x]).toSorted().join(", ");
+        return "Click on: " + getCasesOn().map(x => CASE_NAMES[x]).join(", ");
     }
 
     function getCasesOn() {

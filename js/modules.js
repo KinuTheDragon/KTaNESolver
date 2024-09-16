@@ -27,4 +27,5 @@ const MODULES = [
     "punctuation_marks",
     "laundry",
     "astrology",
+    "worse_venn_diagram",
 ];

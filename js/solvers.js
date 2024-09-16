@@ -30,10 +30,15 @@ function registerSolver(name, callback, edgeworkFieldsUsed, isVanilla) {
 }
 
 function updateModule() {
+    updateFilter();
     let solver = solvers[moduleTypeInput.value];
     clearUI();
     setUIChangeCallback(() => {});
     setResultCallback(() => "");
+    if (!solver) {
+        setTimeout(updateModule, 1);
+        return;
+    }
     solver.callback();
     updateResult();
     setEdgeworkHighlights(solver.edgeworkFieldsUsed);
