@@ -16,7 +16,7 @@
     }
 
     function updateMinesweeperUI(element) {
-        if (element) return;
+        if (element && element !== "count") return;
         removeInput("square");
         addChoiceInput(
             "Square #" + (((edgework.serialNumberDigits[1] || 10) - 1) % solverFields.count + 1),
