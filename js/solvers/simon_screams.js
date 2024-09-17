@@ -33,7 +33,7 @@
         let colorOrder = solverFields.colorOrder.toUpperCase();
         if (!/^[ROYGBP]{6}$/.test(colorOrder)) return "Invalid color order: invalid format.";
         if ((new Set(colorOrder)).size < 6) return "Invalid color order: no repeats allowed.";
-        if (!/^[ROYGBP]+$/.test(solverFields.flashOrder.toUpperCase())) return "Invalid flash order: invalid format.";
+        if (!/^[ROYGBP]{3,}$/.test(solverFields.flashOrder.toUpperCase())) return "Invalid flash order: invalid format.";
         let bigTableColumn = COLORS.indexOf(solverFields.flashOrder[solverFields.stage - 1].toUpperCase());
         let bigTableRow = getBigTableRow();
         let bigTableValue = BIG_TABLE[bigTableRow][bigTableColumn];
