@@ -51,7 +51,36 @@
     }
 
     function getResult() {
+        setTimeout(updateImages, 1);
         return getActualResult() + "\n∧ = ^\n∨ = v\n⊻ = x\n→ = >\n↓ = !\n↔ = -\n← = <"; 
+    }
+
+    function updateImages() {
+        if (getExpressionInvalidity()) return;
+        const resultContainer = document.getElementById("result");
+        let container = document.createElement("div");
+        container.style.position = "relative";
+        resultContainer.appendChild(container);
+        let baseImg = document.createElement("img");
+        baseImg.src = "img/boolean_venn_diagram/base.png";
+        baseImg.classList.add("pixel");
+        baseImg.style.position = "absolute";
+        baseImg.style.top = 0;
+        baseImg.style.left = "50%";
+        baseImg.style.transform = "translateX(-50%)";
+        baseImg.style.width = baseImg.style.height = "128px";
+        container.appendChild(baseImg);
+        for (let caseOn of getCasesOn()) {
+            let img = document.createElement("img");
+            img.src = "img/boolean_venn_diagram/" + caseOn + ".png";
+            img.classList.add("pixel");
+            img.style.position = "absolute";
+            img.style.top = 0;
+            img.style.left = "50%";
+            img.style.transform = "translateX(-50%)";
+            img.style.width = img.style.height = "128px";
+            container.appendChild(img);
+        }
     }
 
     function getActualResult() {

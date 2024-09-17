@@ -67,3 +67,9 @@ a {
 a:hover, a:active {
     color: #0f0;
 }
+
+img.pixel {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
