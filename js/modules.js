@@ -30,4 +30,5 @@ const MODULES = [
     "worse_venn_diagram",
     "switches",
     "simon_screams",
+    "microcontroller",
 ];
