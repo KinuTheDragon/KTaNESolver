@@ -29,4 +29,5 @@ const MODULES = [
     "astrology",
     "worse_venn_diagram",
     "switches",
+    "simon_screams",
 ];
