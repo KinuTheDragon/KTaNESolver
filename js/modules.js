@@ -28,4 +28,5 @@ const MODULES = [
     "laundry",
     "astrology",
     "worse_venn_diagram",
+    "switches",
 ];
