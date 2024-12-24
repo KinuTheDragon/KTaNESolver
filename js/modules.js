@@ -31,4 +31,9 @@ const MODULES = [
     "switches",
     "simon_screams",
     "microcontroller",
+    "limbo_keys",
+    "rubiks_cube",
+    "simon_spins",
+    "baba_is_who",
+    "simon_stops",
 ];
