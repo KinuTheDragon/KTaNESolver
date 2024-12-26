@@ -63,14 +63,14 @@
         if (EXPRESSION_REGEX2.test(expression)) {
             let [_, left, op1, negation, rightLeft, op2, rightRight, shifting] = expression.match(EXPRESSION_REGEX2);
             let parenthesized = getUnaryPostfix(rightLeft).concat(getUnaryPostfix(rightRight), [op2]);
-            if (negation) parenthesized.push("!");
             if (shifting) parenthesized.push(shifting);
+            if (negation) parenthesized.push("!");
             return getUnaryPostfix(left).concat(parenthesized, [op1]);
         } else {
             let [_, negation, leftLeft, op1, leftRight, shifting, op2, right] = expression.match(EXPRESSION_REGEX1);
             let parenthesized = getUnaryPostfix(leftLeft).concat(getUnaryPostfix(leftRight), [op1]);
-            if (negation) parenthesized.push("!");
             if (shifting) parenthesized.push(shifting);
+            if (negation) parenthesized.push("!");
             return parenthesized.concat(getUnaryPostfix(right), [op2]);
         }
     }
@@ -162,6 +162,7 @@
     }
 
     function applyOperator(operator, left, right) {
+        if (BINARY_OPERATORS[operator]) operator = BINARY_OPERATORS[operator];
         let key = left * 3 + right;
         let operatorOutputs = OPERATOR_OUTPUTS[operator];
         return operatorOutputs[key];
